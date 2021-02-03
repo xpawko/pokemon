@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:th="http://www.thymeleaf.org">
+<head>
+
+
+
+
+</head>
+<body>
+<h2>Current pokemon data</h2>
+
+<h4>syntax: type1 type2 -> type3 type4 <br> </h4>
+<div th:if="${message}" th:text="${message}">
+</div>
+
+<table>
+
+
+<tr th:each="ratio: ${ratios}">
+<td th:text="${ratio}"></td>
+
+</tr>
+
+</table>
+
+<form method="post" action="#" th:action="@{addtype}" enctype="multipart/form-data">
+    <tr>
+        <td><label>filename</label></td>
+        <td><input type="text" th:value="${type}" name="type"></td>
+
+    </tr>
+</form>
+
+
+</body>
+
+</html>
